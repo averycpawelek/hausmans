@@ -1009,8 +1009,6 @@
 
         <section class="container">
             <div class="normal">
-
-
                 <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
                      class="vc_row wpb_row vc_row-fluid vc_row-no-padding">
                     <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -1029,13 +1027,13 @@
                                                 <li data-index="rs-1" data-transition="fade" data-slotamount="default"
                                                     data-hideafterloop="0" data-hideslideonmobile="off"
                                                     data-easein="default" data-easeout="default" data-masterspeed="300"
-                                                    data-thumb="http://hausmans.com/wp-content/uploads/2019/06/CIMG3925-100x50.jpeg"
+                                                    data-thumb="{% static '/wp-content/uploads/2019/06/CIMG3925-100x50.jpeg' %}"
                                                     data-rotate="0" data-saveperformance="off" data-title="Slide"
                                                     data-param1="" data-param2="" data-param3="" data-param4=""
                                                     data-param5="" data-param6="" data-param7="" data-param8=""
                                                     data-param9="" data-param10="" data-description="">
                                                     <!-- MAIN IMAGE -->
-                                                    <img src="http://hausmans.com/wp-content/uploads/2019/06/CIMG3925.jpeg"
+                                                    <img src="{% static '/wp-content/uploads/2019/06/CIMG3925.jpeg' %}"
                                                          alt="" title="CIMG3925" width="1632" height="1224"
                                                          data-bgposition="center center" data-bgfit="cover"
                                                          data-bgrepeat="no-repeat" data-bgparallax="off"
@@ -1189,7 +1187,7 @@
                                                     } else {
                                                         revapi1 = tpj("#rev_slider_1_1").show().revolution({
                                                             sliderType: "standard",
-                                                            jsFileLocation: "//hausmans.com/wp-content/plugins/revslider/public/assets/js/",
+                                                            jsFileLocation: "{% static '/wp-content/plugins/revslider/public/assets/js/' %}",
                                                             sliderLayout: "auto",
                                                             dottedOverlay: "none",
                                                             delay: 9000,
