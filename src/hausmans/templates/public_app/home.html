@@ -11,13 +11,13 @@
     <meta name="description"
           content="Since 1960, Hausman Metal Works has specialized in heating and air conditioning ventilation systems, and custom fabricated stainless steel."/>
     <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
-    <link rel="canonical" href="http://hausmans.com/"/>
+    <link rel="canonical" href="{% url 'home' %}"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="Hausman Metal Works and Roofing | St. Joseph, Missouri"/>
     <meta property="og:description"
           content="Since 1960, Hausman Metal Works has specialized in heating and air conditioning ventilation systems, and custom fabricated stainless steel."/>
-    <meta property="og:url" content="http://hausmans.com/"/>
+    <meta property="og:url" content="{% url 'home' %}"/>
     <meta property="og:site_name" content="Hausmans"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:description"
@@ -800,7 +800,7 @@
             src='{% static "/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js" %}'></script>
     <script type='text/javascript'
             src='{% static "/wp-content/plugins/mobile-menu/includes/js/mobmenu.js" %}'></script>
-    <link rel='shortlink' href='http://hausmans.com/'/>
+    <link rel='shortlink' href='{% url 'home' %}'/>
     <script>
         document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     </script>
@@ -895,7 +895,7 @@
     <div class="site-wrapper ">
         <header class="site-header site-header-sticky site-header-style-boxed site-header-layout-normal site-header-dropdown-3">
             <div class="container preheader-wrap">
-                <div class="site-logo"><a href="http://hausmans.com/">
+                <div class="site-logo"><a href="{% url 'home' %}">
                     <img alt="Hausmans" data-src="{% static "/wp-content/uploads/2019/05/logo-2.png" %}"
                          class="logo-mobile lazyload"
                          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
@@ -1247,11 +1247,11 @@
                                 <div class="f-content__image"><img width="800" height="526" alt=""
                                                                    data-srcset="{% static '/wp-content/uploads/2019/06/21.jpg' %} 800w, {% static '/wp-content/uploads/2019/06/21-300x197.jpg' %} 300w, {% static '/wp-content/uploads/2019/06/21-768x505.jpg' %} 768w, {% static '/wp-content/uploads/2019/06/21-370x243.jpg' %} 370w, {% static '/wp-content/uploads/2019/06/21-360x237.jpg' %} 360w, {% static '/wp-content/uploads/2019/06/21-600x395.jpg' %} 600w"
                                                                    sizes="(max-width: 800px) 100vw, 800px"
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/06/21.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/06/21.jpg' %}"
                                                                    class="attachment-full size-full lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                     <noscript><img width="800" height="526"
-                                                   src="http://hausmans.com/wp-content/uploads/2019/06/21.jpg"
+                                                   src="{% static '/wp-content/uploads/2019/06/21.jpg' %}"
                                                    class="attachment-full size-full" alt=""
                                                    srcset="{% static '/wp-content/uploads/2019/06/21.jpg' %} 800w, {% static '/wp-content/uploads/2019/06/21-300x197.jpg' %} 300w, {% static '/wp-content/uploads/2019/06/21-768x505.jpg' %} 768w, {% static '/wp-content/uploads/2019/06/21-370x243.jpg' %} 370w, {% static '/wp-content/uploads/2019/06/21-360x237.jpg' %} 360w, {% static '/wp-content/uploads/2019/06/21-600x395.jpg' %} 600w"
                                                    sizes="(max-width: 800px) 100vw, 800px"/></noscript>
@@ -1275,15 +1275,15 @@
                         <div class="vc_column-inner vc_custom_1500281377860">
                             <div class="wpb_wrapper"><a href="#" class="f-content f-content--style-2">
                                 <div class="f-content__image"><img width="1512" height="1008" alt=""
-                                                                   data-srcset="http://hausmans.com/wp-content/uploads/2019/06/welding-web.png 1512w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-300x200.png 300w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-768x512.png 768w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-1024x683.png 1024w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-370x247.png 370w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-1200x800.png 1200w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-360x240.png 360w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-600x400.png 600w"
+                                                                   data-srcset="{% static '/wp-content/uploads/2019/06/welding-web.png' %} 1512w, {% static '/wp-content/uploads/2019/06/welding-web-300x200.png' %} 300w, {% static '/wp-content/uploads/2019/06/welding-web-768x512.png' %} 768w, {% static '/wp-content/uploads/2019/06/welding-web-1024x683.png' %} 1024w, {% static '/wp-content/uploads/2019/06/welding-web-370x247.png' %} 370w, {% static '/wp-content/uploads/2019/06/welding-web-1200x800.png' %} 1200w, {% static '/wp-content/uploads/2019/06/welding-web-360x240.png' %} 360w, {% static '/wp-content/uploads/2019/06/welding-web-600x400.png' %} 600w"
                                                                    sizes="(max-width: 1512px) 100vw, 1512px"
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/06/welding-web.png"
+                                                                   data-src="{% static '/wp-content/uploads/2019/06/welding-web.png' %}"
                                                                    class="attachment-full size-full lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                     <noscript><img width="1512" height="1008"
-                                                   src="http://hausmans.com/wp-content/uploads/2019/06/welding-web.png"
+                                                   src="{% static '/wp-content/uploads/2019/06/welding-web.png' %}"
                                                    class="attachment-full size-full" alt=""
-                                                   srcset="http://hausmans.com/wp-content/uploads/2019/06/welding-web.png 1512w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-300x200.png 300w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-768x512.png 768w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-1024x683.png 1024w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-370x247.png 370w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-1200x800.png 1200w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-360x240.png 360w, http://hausmans.com/wp-content/uploads/2019/06/welding-web-600x400.png 600w"
+                                                   srcset="{% static '/wp-content/uploads/2019/06/welding-web.png' %} 1512w, {% static '/wp-content/uploads/2019/06/welding-web-300x200.png' %} 300w, {% static '/wp-content/uploads/2019/06/welding-web-768x512.png' %} 768w, {% static '/wp-content/uploads/2019/06/welding-web-1024x683.png' %} 1024w, {% static '/wp-content/uploads/2019/06/welding-web-370x247.png' %} 370w, {% static '/wp-content/uploads/2019/06/welding-web-1200x800.png' %} 1200w, {% static '/wp-content/uploads/2019/06/welding-web-360x240.png' %} 360w, {% static '/wp-content/uploads/2019/06/welding-web-600x400.png' %} 600w"
                                                    sizes="(max-width: 1512px) 100vw, 1512px"/></noscript>
                                 </div>
                                 <div class="f-content__wrap">
@@ -1305,15 +1305,15 @@
                         <div class="vc_column-inner vc_custom_1500281389118">
                             <div class="wpb_wrapper"><a href="#" class="f-content f-content--style-2">
                                 <div class="f-content__image"><img width="995" height="663" alt=""
-                                                                   data-srcset="http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3.png 995w, http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3-300x200.png 300w, http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3-768x512.png 768w, http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3-370x247.png 370w, http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3-360x240.png 360w, http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3-600x400.png 600w"
+                                                                   data-srcset="{% static '/wp-content/uploads/2019/06/Quality-metal-3.png' %} 995w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-300x200.png' %} 300w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-768x512.png' %} 768w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-370x247.png' %} 370w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-360x240.png' %} 360w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-600x400.png' %} 600w"
                                                                    sizes="(max-width: 995px) 100vw, 995px"
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3.png"
+                                                                   data-src="{% static '/wp-content/uploads/2019/06/Quality-metal-3.png' %}"
                                                                    class="attachment-full size-full lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                     <noscript><img width="995" height="663"
-                                                   src="http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3.png"
+                                                   src="{% static '/wp-content/uploads/2019/06/Quality-metal-3.png' %}"
                                                    class="attachment-full size-full" alt=""
-                                                   srcset="http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3.png 995w, http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3-300x200.png 300w, http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3-768x512.png 768w, http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3-370x247.png 370w, http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3-360x240.png 360w, http://hausmans.com/wp-content/uploads/2019/06/Quality-metal-3-600x400.png 600w"
+                                                   srcset="{% static '/wp-content/uploads/2019/06/Quality-metal-3.png' %} 995w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-300x200.png' %} 300w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-768x512.png' %} 768w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-370x247.png' %} 370w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-360x240.png' %} 360w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-600x400.png' %} 600w"
                                                    sizes="(max-width: 995px) 100vw, 995px"/></noscript>
                                 </div>
                                 <div class="f-content__wrap">
@@ -1350,171 +1350,171 @@
                                 </div>
                                 <ul class='owl-carousel recentportfolio clearfix' data-col=6>
                                     <li class='item item-type-line'><a class='item-hover'
-                                                                       href=http://hausmans.com/portfolio/shop-jobs/>
+                                                                       href="{% url 'portfolio-project' project_identifier='shop-jobs' %}">
                                         <div class='mask'></div>
                                         <div class='item-info'>
                                             <div class='headline'><h2>Shop Jobs</h2></div>
                                         </div>
                                     </a>
                                         <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/05/cimg4522-360x267.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg4522-360x267.jpg' %}"
                                                                    class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="360" height="267"
-                                                           src="http://hausmans.com/wp-content/uploads/2019/05/cimg4522-360x267.jpg"
+                                                           src="{% static '/wp-content/uploads/2019/05/cimg4522-360x267.jpg' %}"
                                                            class="attachment-post-thumb size-post-thumb wp-post-image"
                                                            alt=""/></noscript>
                                         </div>
                                     </li>
                                     <li class='item item-type-line'><a class='item-hover'
-                                                                       href=http://hausmans.com/portfolio/acme-foundry/>
+                                                                       href="{% url 'portfolio-project' project_identifier='acme-foundry' %}">
                                         <div class='mask'></div>
                                         <div class='item-info'>
                                             <div class='headline'><h2>Acme Foundry</h2></div>
                                         </div>
                                     </a>
                                         <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/05/cimg1622-jpg-360x267.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg1622-jpg-360x267.jpg' %}"
                                                                    class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="360" height="267"
-                                                           src="http://hausmans.com/wp-content/uploads/2019/05/cimg1622-jpg-360x267.jpg"
+                                                           src="{% static '/wp-content/uploads/2019/05/cimg1622-jpg-360x267.jpg' %}"
                                                            class="attachment-post-thumb size-post-thumb wp-post-image"
                                                            alt=""/></noscript>
                                         </div>
                                     </li>
                                     <li class='item item-type-line'><a class='item-hover'
-                                                                       href=http://hausmans.com/portfolio/prospect-foundry/>
+                                                                       href="{% url 'portfolio-project' project_identifier='prospect-foundry' %}">
                                         <div class='mask'></div>
                                         <div class='item-info'>
                                             <div class='headline'><h2>Prospect Foundry</h2></div>
                                         </div>
                                     </a>
                                         <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/05/IMG_1412-360x267.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/05/IMG_1412-360x267.jpg' %}"
                                                                    class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="360" height="267"
-                                                           src="http://hausmans.com/wp-content/uploads/2019/05/IMG_1412-360x267.jpg"
+                                                           src="{% static '/wp-content/uploads/2019/05/IMG_1412-360x267.jpg' %}"
                                                            class="attachment-post-thumb size-post-thumb wp-post-image"
                                                            alt=""/></noscript>
                                         </div>
                                     </li>
                                     <li class='item item-type-line'><a class='item-hover'
-                                                                       href=http://hausmans.com/portfolio/shop-fabrication/>
+                                                                       href="{% url 'portfolio-project' project_identifier='shop-fabrication' %}">
                                         <div class='mask'></div>
                                         <div class='item-info'>
                                             <div class='headline'><h2>Shop Fabrication</h2></div>
                                         </div>
                                     </a>
                                         <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/05/IMG_2382-360x267.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/05/IMG_2382-360x267.jpg' %}"
                                                                    class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="360" height="267"
-                                                           src="http://hausmans.com/wp-content/uploads/2019/05/IMG_2382-360x267.jpg"
+                                                           src="{% static '/wp-content/uploads/2019/05/IMG_2382-360x267.jpg' %}"
                                                            class="attachment-post-thumb size-post-thumb wp-post-image"
                                                            alt=""/></noscript>
                                         </div>
                                     </li>
                                     <li class='item item-type-line'><a class='item-hover'
-                                                                       href=http://hausmans.com/portfolio/hudson-parin/>
+                                                                       href="{% url 'portfolio-project' project_identifier='hudson-parin' %}">
                                         <div class='mask'></div>
                                         <div class='item-info'>
                                             <div class='headline'><h2>Hudson Parin</h2></div>
                                         </div>
                                     </a>
                                         <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/05/cimg1770-jpg-360x267.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg1770-jpg-360x267.jpg' %}"
                                                                    class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="360" height="267"
-                                                           src="http://hausmans.com/wp-content/uploads/2019/05/cimg1770-jpg-360x267.jpg"
+                                                           src="{% static '/wp-content/uploads/2019/05/cimg1770-jpg-360x267.jpg' %}"
                                                            class="attachment-post-thumb size-post-thumb wp-post-image"
                                                            alt=""/></noscript>
                                         </div>
                                     </li>
                                     <li class='item item-type-line'><a class='item-hover'
-                                                                       href=http://hausmans.com/portfolio/clow-valve/>
+                                                                       href="{% url 'portfolio-project' project_identifier='clow-valve' %}">
                                         <div class='mask'></div>
                                         <div class='item-info'>
                                             <div class='headline'><h2>Clow Valve</h2></div>
                                         </div>
                                     </a>
                                         <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/05/cimg1961-jpg-compressor-360x267.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg1961-jpg-compressor-360x267.jpg' %}"
                                                                    class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="360" height="267"
-                                                           src="http://hausmans.com/wp-content/uploads/2019/05/cimg1961-jpg-compressor-360x267.jpg"
+                                                           src="{% static '/wp-content/uploads/2019/05/cimg1961-jpg-compressor-360x267.jpg' %}"
                                                            class="attachment-post-thumb size-post-thumb wp-post-image"
                                                            alt=""/></noscript>
                                         </div>
                                     </li>
                                     <li class='item item-type-line'><a class='item-hover'
-                                                                       href=http://hausmans.com/portfolio/heartland-health-cancer-center/>
+                                                                       href="{% url 'portfolio-project' project_identifier='heartland-health-cancer-center' %}">
                                         <div class='mask'></div>
                                         <div class='item-info'>
                                             <div class='headline'><h2>Heartland Health Cancer Center</h2></div>
                                         </div>
                                     </a>
                                         <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/05/cimg4686-jpg-360x267.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg4686-jpg-360x267.jpg' %}"
                                                                    class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="360" height="267"
-                                                           src="http://hausmans.com/wp-content/uploads/2019/05/cimg4686-jpg-360x267.jpg"
+                                                           src="{% static '/wp-content/uploads/2019/05/cimg4686-jpg-360x267.jpg' %}"
                                                            class="attachment-post-thumb size-post-thumb wp-post-image"
                                                            alt=""/></noscript>
                                         </div>
                                     </li>
                                     <li class='item item-type-line'><a class='item-hover'
-                                                                       href=http://hausmans.com/portfolio/heartland-health-centre/>
+                                                                       href="{% url 'portfolio-project' project_identifier='heartland-health-centre' %}">
                                         <div class='mask'></div>
                                         <div class='item-info'>
                                             <div class='headline'><h2>Heartland Health Centre</h2></div>
                                         </div>
                                     </a>
                                         <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/05/cimg4682-jpg-1-compressor-360x267.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg4682-jpg-1-compressor-360x267.jpg' %}"
                                                                    class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="360" height="267"
-                                                           src="http://hausmans.com/wp-content/uploads/2019/05/cimg4682-jpg-1-compressor-360x267.jpg"
+                                                           src="{% static '/wp-content/uploads/2019/05/cimg4682-jpg-1-compressor-360x267.jpg' %}"
                                                            class="attachment-post-thumb size-post-thumb wp-post-image"
                                                            alt=""/></noscript>
                                         </div>
                                     </li>
                                     <li class='item item-type-line'><a class='item-hover'
-                                                                       href=http://hausmans.com/portfolio/nodaway-valley-bank/>
+                                                                       href="{% url 'portfolio-project' project_identifier='nodaway-valley-bank' %}">
                                         <div class='mask'></div>
                                         <div class='item-info'>
                                             <div class='headline'><h2>Nodaway Valley Bank</h2></div>
                                         </div>
                                     </a>
                                         <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/05/CIMG4725-360x267.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/05/CIMG4725-360x267.jpg' %}"
                                                                    class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="360" height="267"
-                                                           src="http://hausmans.com/wp-content/uploads/2019/05/CIMG4725-360x267.jpg"
+                                                           src="{% static '/wp-content/uploads/2019/05/CIMG4725-360x267.jpg' %}"
                                                            class="attachment-post-thumb size-post-thumb wp-post-image"
                                                            alt=""/></noscript>
                                         </div>
                                     </li>
                                     <li class='item item-type-line'><a class='item-hover'
-                                                                       href=http://hausmans.com/portfolio/carden-park-school/>
+                                                                       href="{% url 'portfolio-project' project_identifier='carden-park-school' %}">
                                         <div class='mask'></div>
                                         <div class='item-info'>
                                             <div class='headline'><h2>Carden Park School</h2></div>
                                         </div>
                                     </a>
                                         <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="http://hausmans.com/wp-content/uploads/2019/05/IMG_2743-360x267.jpg"
+                                                                   data-src="{% static '/wp-content/uploads/2019/05/IMG_2743-360x267.jpg' %}"
                                                                    class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
                                                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="360" height="267"
-                                                           src="http://hausmans.com/wp-content/uploads/2019/05/IMG_2743-360x267.jpg"
+                                                           src="{% static '/wp-content/uploads/2019/05/IMG_2743-360x267.jpg' %}"
                                                            class="attachment-post-thumb size-post-thumb wp-post-image"
                                                            alt=""/></noscript>
                                         </div>
@@ -1549,13 +1549,13 @@
                 <div class="col-md-4 col-xs-6">
                     <ul>
                         <li id="media_image-2" class="widget-container widget_media_image"><a
-                                href="http://hausmans.com"><img width="258" height="79" alt=""
+                                href="{% url 'home' %}"><img width="258" height="79" alt=""
                                                                 style="max-width: 100%; height: auto;"
-                                                                data-src="http://hausmans.com/wp-content/uploads/2019/05/logo-2.png"
+                                                                data-src="{% static '/wp-content/uploads/2019/05/logo-2.png' %}"
                                                                 class="image wp-image-1568  attachment-full size-full lazyload"
                                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                             <noscript><img width="258" height="79"
-                                           src="http://hausmans.com/wp-content/uploads/2019/05/logo-2.png"
+                                           src="{% static '/wp-content/uploads/2019/05/logo-2.png' %}"
                                            class="image wp-image-1568  attachment-full size-full" alt=""
                                            style="max-width: 100%; height: auto;"/></noscript>
                         </a></li>
@@ -1630,18 +1630,17 @@
 </div>
 
 <div id="scrolltop" class="fixed scrollup"><a href="#" title="Scroll to top"><i class="fa fa-angle-up"></i></a></div>
-<input type="hidden" id="theme-path" value="http://hausmans.com/wp-content/themes/constructo"/>
 <div class="mobmenu-overlay"></div>
 <div class="mob-menu-header-holder mobmenu" data-menu-display="mob-menu-slideout-over" data-open-icon="down-open"
      data-close-icon="up-open">
     <div class="mobmenul-container"><a href="#" class="mobmenu-left-bt mobmenu-trigger-action"
                                        data-panel-target="mobmenu-left-panel" aria-label="Left Menu Button"><i
             class="mob-icon-menu mob-menu-icon"></i><i class="mob-icon-cancel-1 mob-cancel-button"></i></a></div>
-    <div class="mob-menu-logo-holder"><a href="http://hausmans.com" class="headertext"><img alt="Hausmans"
-                                                                                            data-src="http://hausmans.com/wp-content/uploads/2019/05/logo-2.png"
+    <div class="mob-menu-logo-holder"><a href="{% url 'home' %}" class="headertext"><img alt="Hausmans"
+                                                                                            data-src="{% static '/wp-content/uploads/2019/05/logo-2.png' %}"
                                                                                             class="mob-standard-logo lazyload"
                                                                                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-        <noscript><img class="mob-standard-logo" src="http://hausmans.com/wp-content/uploads/2019/05/logo-2.png"
+        <noscript><img class="mob-standard-logo" src="{% static '/wp-content/uploads/2019/05/logo-2.png' %}"
                        alt="Hausmans"></noscript>
     </a></div>
     <div class="mobmenur-container"></div>
@@ -1654,47 +1653,47 @@
         <div class="menu-main-menu-container">
             <ul id="mobmenuleft">
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1462 current_page_item menu-item-1474">
-                    <a href="http://hausmans.com/" class="">Home</a></li>
+                    <a href="{% url 'home' %}" class="">Home</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1967"><a
-                        href="http://hausmans.com/portfolio/" class="">Projects</a></li>
+                        href="{% url 'portfolio' %}" class="">Projects</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1516">
-                    <a href="http://hausmans.com/what-we-do/" class="">Services</a>
+                    <a href="{% url 'services' %}" class="">Services</a>
                     <ul class="sub-menu ">
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1500"><a
-                                href="http://hausmans.com/commercial-industrial-roofing/" class="">COMMERCIAL /
+                                href="{% url 'commercial-industrial-roofing' %}" class="">COMMERCIAL /
                             INDUSTRIAL ROOFING</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1532"><a
-                                href="http://hausmans.com/architectural-sheet-metal/" class="">ARCHITECTURAL SHEET
+                                href="{% url 'architectural-sheet-metal' %}" class="">ARCHITECTURAL SHEET
                             METAL</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1662"><a
-                                href="http://hausmans.com/plasma-cutting/" class="">PLASMA CUTTING</a></li>
+                                href="{% url 'plasma-cutting' %}" class="">PLASMA CUTTING</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1530"><a
-                                href="http://hausmans.com/industrial-ventilation/" class="">INDUSTRIAL VENTILATION</a>
+                                href="{% url 'industrial-ventilation' %}" class="">INDUSTRIAL VENTILATION</a>
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1529"><a
-                                href="http://hausmans.com/sheet-metal-fabrication/" class="">SHEET METAL FABRICATION</a>
+                                href="{% url 'sheet-metal-fabrication' %}" class="">SHEET METAL FABRICATION</a>
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1528"><a
-                                href="http://hausmans.com/hvac/" class="">HVAC</a></li>
+                                href="{% url 'hvac' %}" class="">HVAC</a></li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1616">
-                            <a href="http://hausmans.com/specialties/" class="">SPECIALTIES</a>
+                            <a href="{% url 'specialties' %}" class="">SPECIALTIES</a>
                             <ul class="sub-menu ">
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a
-                                        href="http://hausmans.com/metal-roofing/" class="">METAL ROOFING</a></li>
+                                        href="{% url 'metal-roofing' %}" class="">METAL ROOFING</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1626"><a
-                                        href="http://hausmans.com/solar-roofing/" class="">SOLAR ROOFING</a></li>
+                                        href="{% url 'solar-roofing' %}" class="">SOLAR ROOFING</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1635"><a
-                                        href="http://hausmans.com/waterjet-cutting/" class="">WATERJET CUTTING</a></li>
+                                        href="{% url 'waterjet-cutting' %}" class="">WATERJET CUTTING</a></li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1641"><a
-                                        href="http://hausmans.com/roof-repair/" class="">ROOF REPAIR</a></li>
+                                        href="{% url 'roof-repair' %}" class="">ROOF REPAIR</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1519"><a
-                        href="http://hausmans.com/about-us/" class="">About us</a></li>
+                        href="{% url 'about-us' %}" class="">About us</a></li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1521"><a
-                        href="http://hausmans.com/contact-us/" class="">Contact us</a></li>
+                        href="{% url 'contact-us' %}" class="">Contact us</a></li>
             </ul>
         </div>
     </div>
@@ -1711,19 +1710,6 @@
         jQuery(sliderID).show().html(errorMessage);
     }
 </script>
-<script type='text/javascript' src='http://hausmans.com/wp-includes/js/comment-reply.min.js?ver=5.2.9'></script>
-<script type='text/javascript'>
-    /* <![CDATA[ */
-    var wpcf7 = {
-        "apiSettings": {
-            "root": "http:\/\/hausmans.com\/wp-json\/contact-form-7\/v1",
-            "namespace": "contact-form-7\/v1"
-        }, "cached": "1"
-    };
-    /* ]]> */
-</script>
-<script type='text/javascript'
-        src='http://hausmans.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.6'></script>
 <script type='text/javascript'>
     window.lazySizesConfig = window.lazySizesConfig || {};
 
@@ -1734,19 +1720,19 @@
     lazySizesConfig.loadMode = 1;
 </script>
 <script type='text/javascript'
-        src='http://hausmans.com/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.4.2'></script>
+        src='{% static '/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js' %}'></script>
 <script type='text/javascript'>
     lazySizes.init();
 </script>
 <script type='text/javascript'
-        src='http://hausmans.com/wp-content/themes/constructo/js/quantity_woo23.js?ver=5.2.9'></script>
+        src='{% static '/wp-content/themes/constructo/js/quantity_woo23.js' %}'></script>
 <script type='text/javascript'
-        src='http://hausmans.com/wp-content/themes/constructo/js/bootstrap/bootstrap.min.js?ver=5.2.9'></script>
+        src='{% static '/wp-content/themes/constructo/js/bootstrap/bootstrap.min.js' %}'></script>
 <script type='text/javascript'
-        src='http://hausmans.com/wp-content/themes/constructo/js/waypoints.js?ver=5.2.9'></script>
-<script type='text/javascript' src='http://hausmans.com/wp-content/themes/constructo/js/parallax.js?ver=5.2.9'></script>
+        src='{% static '/wp-content/themes/constructo/js/waypoints.js' %}'></script>
+<script type='text/javascript' src='{% static '/wp-content/themes/constructo/js/parallax.js' %}'></script>
 <script type='text/javascript'
-        src='http://hausmans.com/wp-content/themes/constructo/js/jquery.swipebox.js?ver=5.2.9'></script>
+        src='{% static '/wp-content/themes/constructo/js/jquery.swipebox.js' %}'></script>
 <script type='text/javascript'>
     /* <![CDATA[ */
     var anps = {
@@ -1757,15 +1743,15 @@
     /* ]]> */
 </script>
 <script type='text/javascript'
-        src='http://hausmans.com/wp-content/themes/constructo/js/functions.js?ver=5.2.9'></script>
-<script type='text/javascript' src='http://hausmans.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+        src='{% static '/wp-content/themes/constructo/js/functions.js' %}'></script>
+<script type='text/javascript' src='{% static '/wp-includes/js/imagesloaded.min.js' %}'></script>
 <script type='text/javascript'
-        src='http://hausmans.com/wp-content/themes/constructo/js/doubletaptogo.js?ver=5.2.9'></script>
+        src='{% static '/wp-content/themes/constructo/js/doubletaptogo.js' %}'></script>
 <script type='text/javascript'
-        src='http://hausmans.com/wp-content/themes/constructo/js/owl/owl.carousel.js?ver=5.2.9'></script>
-<script type='text/javascript' src='http://hausmans.com/wp-includes/js/wp-embed.min.js?ver=5.2.9'></script>
+        src='{% static '/wp-content/themes/constructo/js/owl/owl.carousel.js' %}'></script>
+<script type='text/javascript' src='{% static '/wp-includes/js/wp-embed.min.js' %}'></script>
 <script type='text/javascript'
-        src='http://hausmans.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.0.2'></script>
+        src='{% static '/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js' %}'></script>
 
 </body>
 </html>

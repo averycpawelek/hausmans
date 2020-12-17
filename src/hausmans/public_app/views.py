@@ -14,3 +14,7 @@ def home_page_view(request):
 
 def to_do_view(request):
     return HttpResponse('TODO')
+
+
+def to_do_project_view(request, project_identifier):
+    return HttpResponse(project_identifier)
