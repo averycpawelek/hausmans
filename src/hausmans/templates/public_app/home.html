@@ -888,31 +888,25 @@
             opacity: 1;
         }</style>
     </noscript>
+    <link href="{% static "/fontawesome/css/all.css" %}" rel="stylesheet">
 </head>
 <body class="home page-template-default page page-id-1462 wpb-js-composer js-comp-ver-6.0.2 vc_responsive mob-menu-slideout-over">
 <div class="site-wrap">
     <div class="site-wrapper ">
         <header class="site-header site-header-sticky site-header-style-boxed site-header-layout-normal site-header-dropdown-3">
             <div class="container preheader-wrap">
-                <div class="site-logo"><a href="http://hausmans.com/"> <img style="height: 33px; width: 158px; "
-                                                                            alt="Site logo"
-                                                                            data-src="http://hausmans.onthetopsearch.com/wp-content/uploads/2019/05/logo-1.png"
-                                                                            class="logo-sticky lazyload"
-                                                                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-                    <noscript><img style="height: 33px; width: 158px; " class="logo-sticky" alt="Site logo"
-                                   src="http://hausmans.onthetopsearch.com/wp-content/uploads/2019/05/logo-1.png">
-                    </noscript>
-                    <img alt="Hausmans" data-src="http://hausmans.com/wp-content/uploads/2019/05/logo-2.png"
+                <div class="site-logo"><a href="http://hausmans.com/">
+                    <img alt="Hausmans" data-src="{% static "/wp-content/uploads/2019/05/logo-2.png" %}"
                          class="logo-mobile lazyload"
                          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
                     <noscript><img class="logo-mobile" alt="Hausmans"
-                                   src="http://hausmans.com/wp-content/uploads/2019/05/logo-2.png"></noscript>
+                                   src="{% static "/wp-content/uploads/2019/05/logo-2.png" %}"></noscript>
                     <img style="width: auto; height: auto" alt="Site logo"
-                         data-src="http://hausmans.com/wp-content/uploads/2019/05/logo-2.png"
+                         data-src="{% static "/wp-content/uploads/2019/05/logo-2.png" %}"
                          class="logo-desktop lazyload"
                          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
                     <noscript><img class="logo-desktop" style="width: auto; height: auto" alt="Site logo"
-                                   src="http://hausmans.com/wp-content/uploads/2019/05/logo-2.png"></noscript>
+                                   src="{% static "/wp-content/uploads/2019/05/logo-2.png" %}"></noscript>
                 </a></div>
                 <div class="large-above-menu large-above-menu-style-2">
                     <div id="anpstext-8" class="widget widget_anpstext">
@@ -941,7 +935,7 @@
                         <div class="anpstext-wrap">
                             <span class="anpstext-arrow" style="color: #dc0000"></span>
 
-                            <span class="fa fa-envelope-o" style="color: #dc0000"></span>
+                            <span class="fa fa-envelope" style="color: #dc0000"></span>
                             <span class="anpstext-desc" style="color: #848484">
                     <span class="important" style="color: #0a0a0a">Send us an email</span>
                                         <br/>
