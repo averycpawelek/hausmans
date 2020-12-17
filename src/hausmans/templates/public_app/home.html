@@ -944,67 +944,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-wrap">
-                <div class="container">
-                    <div class="nav-bar-wrapper">
-                        <div class="nav-bar">
-                            <nav class="site-navigation">
-                                <ul id="menu-main-menu" class="">
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-1462 current_page_item menu-item-depth-0">
-                                        <a href="{% url 'home' %}">Home</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
-                                        <a href="{% url 'portfolio' %}">Projects</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-0">
-                                        <a href="{% url 'services' %}">Services</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                <a href="{% url 'commercial-industrial-roofing' %}">COMMERCIAL
-                                                    / INDUSTRIAL ROOFING</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                <a href="{% url 'architectural-sheet-metal' %}">ARCHITECTURAL
-                                                    SHEET METAL</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                <a href="{% url 'plasma-cutting' %}">PLASMA CUTTING</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                <a href="{% url 'industrial-ventilation' %}">INDUSTRIAL
-                                                    VENTILATION</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                <a href="{% url 'sheet-metal-fabrication' %}">SHEET METAL
-                                                    FABRICATION</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-1">
-                                                <a href="{% url 'hvac' %}">HVAC</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-depth-1">
-                                                <a href="{% url 'specialties' %}">SPECIALTIES</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-2">
-                                                        <a href="{% url 'metal-roofing' %}">METAL ROOFING</a>
-                                                    </li>
-                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-2">
-                                                        <a href="{% url 'solar-roofing' %}">SOLAR ROOFING</a>
-                                                    </li>
-                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-2">
-                                                        <a href="{% url 'waterjet-cutting' %}">WATERJET
-                                                            CUTTING</a></li>
-                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-2">
-                                                        <a href="{% url 'roof-repair' %}">ROOF REPAIR</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
-                                        <a href="{% url 'about-us' %}">About us</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-depth-0">
-                                        <a href="{% url 'contact-us' %}">Contact us</a></li>
-                                </ul>
-                            </nav>
-                            <button class="navbar-toggle" type="button">
-                                <span class="sr-only">Toggle navigation</span>
-                                <i class="fa fa-bars" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% include 'navbar.html' %}
         </header>
 
         <section class="container">
@@ -1097,7 +1037,9 @@
                                                     </div>
 
                                                     <!-- LAYER NR. 3 -->
-                                                    <div class="tp-caption rev-btn "
+                                                    <a class="tp-caption rev-btn "
+                                                       href="{% url 'services' %}"
+                                                       target="_self"
                                                          id="slide-1-layer-3"
                                                          data-x="['left','left','left','left']"
                                                          data-hoffset="['29','423','246','63']"
@@ -1108,7 +1050,7 @@
                                                          data-whitespace="normal"
 
                                                          data-type="button"
-                                                         data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"http:\/\/hausmans.com\/what-we-do\/","delay":""}]'
+                                                         data-actions=''
                                                          data-responsive_offset="on"
 
                                                          data-frames='[{"delay":500,"speed":290,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":310,"frame":"999","to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(255,255,255,1);bg:rgba(255,204,67,1);bs:solid;bw:0 0 0 0;"}]'
@@ -1120,11 +1062,11 @@
 
                                                          style="z-index: 7; min-width: 180px; max-width: 180px; white-space: normal; font-size: 14px; line-height: 17px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: px;font-family:Montserrat;background-color:rgba(250,183,2,1);border-color:rgba(0,0,0,1);border-radius:3px 3px 3px 3px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;background:#dc0000 !important;cursor:pointer;">
                                                         LEARN MORE
-                                                    </div>
+                                                    </a>
 
                                                     <!-- LAYER NR. 4 -->
                                                     <a class="tp-caption rev-btn "
-                                                       href="https://hausmans.com/contact-us/" target="_self"
+                                                       href="{% url 'contact-us' %}" target="_self"
                                                        id="slide-1-layer-4"
                                                        data-x="['left','left','left','center']"
                                                        data-hoffset="['217','573','394','80']"
@@ -1239,291 +1181,9 @@
                     </div>
                 </div>
                 <div class="vc_row-full-width vc_clearfix"></div>
-                <div data-vc-full-width="true" data-vc-full-width-init="false"
-                     class="vc_row wpb_row vc_row-fluid vc_custom_1500287931790 vc_row-has-fill">
-                    <div class="wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill">
-                        <div class="vc_column-inner vc_custom_1500281371009">
-                            <div class="wpb_wrapper"><a href="#" class="f-content f-content--style-2">
-                                <div class="f-content__image"><img width="800" height="526" alt=""
-                                                                   data-srcset="{% static '/wp-content/uploads/2019/06/21.jpg' %} 800w, {% static '/wp-content/uploads/2019/06/21-300x197.jpg' %} 300w, {% static '/wp-content/uploads/2019/06/21-768x505.jpg' %} 768w, {% static '/wp-content/uploads/2019/06/21-370x243.jpg' %} 370w, {% static '/wp-content/uploads/2019/06/21-360x237.jpg' %} 360w, {% static '/wp-content/uploads/2019/06/21-600x395.jpg' %} 600w"
-                                                                   sizes="(max-width: 800px) 100vw, 800px"
-                                                                   data-src="{% static '/wp-content/uploads/2019/06/21.jpg' %}"
-                                                                   class="attachment-full size-full lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                    <noscript><img width="800" height="526"
-                                                   src="{% static '/wp-content/uploads/2019/06/21.jpg' %}"
-                                                   class="attachment-full size-full" alt=""
-                                                   srcset="{% static '/wp-content/uploads/2019/06/21.jpg' %} 800w, {% static '/wp-content/uploads/2019/06/21-300x197.jpg' %} 300w, {% static '/wp-content/uploads/2019/06/21-768x505.jpg' %} 768w, {% static '/wp-content/uploads/2019/06/21-370x243.jpg' %} 370w, {% static '/wp-content/uploads/2019/06/21-360x237.jpg' %} 360w, {% static '/wp-content/uploads/2019/06/21-600x395.jpg' %} 600w"
-                                                   sizes="(max-width: 800px) 100vw, 800px"/></noscript>
-                                </div>
-                                <div class="f-content__wrap">
-                                    <div class="f-content__inner-wrap">
-                                        <div class="f-content__icon" style="background-color: #dc0000; "><i
-                                                class="fa fa-codepen"></i></div>
-                                        <div class="f-content__title">EXPERIENCE</div>
-                                        <div class="f-content__divider" style="background-color: #dc0000; "></div>
-                                    </div>
-                                    <div class="f-content__content">Since 1960, Hausman Metal Works has specialized in
-                                        heating and air conditioning ventilation systems, and custom fabricated
-                                        stainless steel, designed to fit your exact needs for your industry.
-                                    </div>
-                                </div>
-                            </a></div>
-                        </div>
-                    </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill">
-                        <div class="vc_column-inner vc_custom_1500281377860">
-                            <div class="wpb_wrapper"><a href="#" class="f-content f-content--style-2">
-                                <div class="f-content__image"><img width="1512" height="1008" alt=""
-                                                                   data-srcset="{% static '/wp-content/uploads/2019/06/welding-web.png' %} 1512w, {% static '/wp-content/uploads/2019/06/welding-web-300x200.png' %} 300w, {% static '/wp-content/uploads/2019/06/welding-web-768x512.png' %} 768w, {% static '/wp-content/uploads/2019/06/welding-web-1024x683.png' %} 1024w, {% static '/wp-content/uploads/2019/06/welding-web-370x247.png' %} 370w, {% static '/wp-content/uploads/2019/06/welding-web-1200x800.png' %} 1200w, {% static '/wp-content/uploads/2019/06/welding-web-360x240.png' %} 360w, {% static '/wp-content/uploads/2019/06/welding-web-600x400.png' %} 600w"
-                                                                   sizes="(max-width: 1512px) 100vw, 1512px"
-                                                                   data-src="{% static '/wp-content/uploads/2019/06/welding-web.png' %}"
-                                                                   class="attachment-full size-full lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                    <noscript><img width="1512" height="1008"
-                                                   src="{% static '/wp-content/uploads/2019/06/welding-web.png' %}"
-                                                   class="attachment-full size-full" alt=""
-                                                   srcset="{% static '/wp-content/uploads/2019/06/welding-web.png' %} 1512w, {% static '/wp-content/uploads/2019/06/welding-web-300x200.png' %} 300w, {% static '/wp-content/uploads/2019/06/welding-web-768x512.png' %} 768w, {% static '/wp-content/uploads/2019/06/welding-web-1024x683.png' %} 1024w, {% static '/wp-content/uploads/2019/06/welding-web-370x247.png' %} 370w, {% static '/wp-content/uploads/2019/06/welding-web-1200x800.png' %} 1200w, {% static '/wp-content/uploads/2019/06/welding-web-360x240.png' %} 360w, {% static '/wp-content/uploads/2019/06/welding-web-600x400.png' %} 600w"
-                                                   sizes="(max-width: 1512px) 100vw, 1512px"/></noscript>
-                                </div>
-                                <div class="f-content__wrap">
-                                    <div class="f-content__inner-wrap">
-                                        <div class="f-content__icon" style="background-color: #dc0000; "><i
-                                                class="fa fa-home"></i></div>
-                                        <div class="f-content__title">SUPERIOR PRODUCTS</div>
-                                        <div class="f-content__divider" style="background-color: #dc0000; "></div>
-                                    </div>
-                                    <div class="f-content__content">Because of our diverse experience base, our
-                                        dedicated staff of great people, state of the art facility and certified safety
-                                        program, we offer superior products that satisfy any customer.
-                                    </div>
-                                </div>
-                            </a></div>
-                        </div>
-                    </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill">
-                        <div class="vc_column-inner vc_custom_1500281389118">
-                            <div class="wpb_wrapper"><a href="#" class="f-content f-content--style-2">
-                                <div class="f-content__image"><img width="995" height="663" alt=""
-                                                                   data-srcset="{% static '/wp-content/uploads/2019/06/Quality-metal-3.png' %} 995w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-300x200.png' %} 300w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-768x512.png' %} 768w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-370x247.png' %} 370w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-360x240.png' %} 360w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-600x400.png' %} 600w"
-                                                                   sizes="(max-width: 995px) 100vw, 995px"
-                                                                   data-src="{% static '/wp-content/uploads/2019/06/Quality-metal-3.png' %}"
-                                                                   class="attachment-full size-full lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                    <noscript><img width="995" height="663"
-                                                   src="{% static '/wp-content/uploads/2019/06/Quality-metal-3.png' %}"
-                                                   class="attachment-full size-full" alt=""
-                                                   srcset="{% static '/wp-content/uploads/2019/06/Quality-metal-3.png' %} 995w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-300x200.png' %} 300w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-768x512.png' %} 768w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-370x247.png' %} 370w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-360x240.png' %} 360w, {% static '/wp-content/uploads/2019/06/Quality-metal-3-600x400.png' %} 600w"
-                                                   sizes="(max-width: 995px) 100vw, 995px"/></noscript>
-                                </div>
-                                <div class="f-content__wrap">
-                                    <div class="f-content__inner-wrap">
-                                        <div class="f-content__icon" style="background-color: #dc0000; "><i
-                                                class="fa fa-wrench"></i></div>
-                                        <div class="f-content__title">QUALITY</div>
-                                        <div class="f-content__divider" style="background-color: #dc0000; "></div>
-                                    </div>
-                                    <div class="f-content__content">Our number one priority is doing your job right the
-                                        first time, and every time.
-                                    </div>
-                                </div>
-                            </a></div>
-                        </div>
-                    </div>
-                </div>
+{#                {% include 'public_app/legacy_home_page_content.html' %}#}
                 <div class="vc_row-full-width vc_clearfix"></div>
-                <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
-                     class="vc_row wpb_row vc_row-fluid vc_custom_1560533669800 vc_row-has-fill vc_row-no-padding">
-                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-                                <div class='container'>
-                                    <div class='row owly'>
-                                        <div class='col-md-6 col-xs-6'><h2 style='color:#ffffff;'>Recent Projects</h2>
-                                        </div>
-                                        <div class='col-xs-6 col-md-6 align-right'><a class='owlprev'
-                                                                                      style='background:#3d3d3d;'><i
-                                                class='fa fa-chevron-left' style='color:#c1c1c1;'></i></a><a
-                                                class='owlnext' style='background:#3d3d3d;'><i
-                                                class='fa fa-chevron-right' style='color:#c1c1c1;'></i></a></div>
-                                    </div>
-                                </div>
-                                <ul class='owl-carousel recentportfolio clearfix' data-col=6>
-                                    <li class='item item-type-line'><a class='item-hover'
-                                                                       href="{% url 'portfolio-project' project_identifier='shop-jobs' %}">
-                                        <div class='mask'></div>
-                                        <div class='item-info'>
-                                            <div class='headline'><h2>Shop Jobs</h2></div>
-                                        </div>
-                                    </a>
-                                        <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg4522-360x267.jpg' %}"
-                                                                   class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="360" height="267"
-                                                           src="{% static '/wp-content/uploads/2019/05/cimg4522-360x267.jpg' %}"
-                                                           class="attachment-post-thumb size-post-thumb wp-post-image"
-                                                           alt=""/></noscript>
-                                        </div>
-                                    </li>
-                                    <li class='item item-type-line'><a class='item-hover'
-                                                                       href="{% url 'portfolio-project' project_identifier='acme-foundry' %}">
-                                        <div class='mask'></div>
-                                        <div class='item-info'>
-                                            <div class='headline'><h2>Acme Foundry</h2></div>
-                                        </div>
-                                    </a>
-                                        <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg1622-jpg-360x267.jpg' %}"
-                                                                   class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="360" height="267"
-                                                           src="{% static '/wp-content/uploads/2019/05/cimg1622-jpg-360x267.jpg' %}"
-                                                           class="attachment-post-thumb size-post-thumb wp-post-image"
-                                                           alt=""/></noscript>
-                                        </div>
-                                    </li>
-                                    <li class='item item-type-line'><a class='item-hover'
-                                                                       href="{% url 'portfolio-project' project_identifier='prospect-foundry' %}">
-                                        <div class='mask'></div>
-                                        <div class='item-info'>
-                                            <div class='headline'><h2>Prospect Foundry</h2></div>
-                                        </div>
-                                    </a>
-                                        <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="{% static '/wp-content/uploads/2019/05/IMG_1412-360x267.jpg' %}"
-                                                                   class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="360" height="267"
-                                                           src="{% static '/wp-content/uploads/2019/05/IMG_1412-360x267.jpg' %}"
-                                                           class="attachment-post-thumb size-post-thumb wp-post-image"
-                                                           alt=""/></noscript>
-                                        </div>
-                                    </li>
-                                    <li class='item item-type-line'><a class='item-hover'
-                                                                       href="{% url 'portfolio-project' project_identifier='shop-fabrication' %}">
-                                        <div class='mask'></div>
-                                        <div class='item-info'>
-                                            <div class='headline'><h2>Shop Fabrication</h2></div>
-                                        </div>
-                                    </a>
-                                        <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="{% static '/wp-content/uploads/2019/05/IMG_2382-360x267.jpg' %}"
-                                                                   class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="360" height="267"
-                                                           src="{% static '/wp-content/uploads/2019/05/IMG_2382-360x267.jpg' %}"
-                                                           class="attachment-post-thumb size-post-thumb wp-post-image"
-                                                           alt=""/></noscript>
-                                        </div>
-                                    </li>
-                                    <li class='item item-type-line'><a class='item-hover'
-                                                                       href="{% url 'portfolio-project' project_identifier='hudson-parin' %}">
-                                        <div class='mask'></div>
-                                        <div class='item-info'>
-                                            <div class='headline'><h2>Hudson Parin</h2></div>
-                                        </div>
-                                    </a>
-                                        <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg1770-jpg-360x267.jpg' %}"
-                                                                   class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="360" height="267"
-                                                           src="{% static '/wp-content/uploads/2019/05/cimg1770-jpg-360x267.jpg' %}"
-                                                           class="attachment-post-thumb size-post-thumb wp-post-image"
-                                                           alt=""/></noscript>
-                                        </div>
-                                    </li>
-                                    <li class='item item-type-line'><a class='item-hover'
-                                                                       href="{% url 'portfolio-project' project_identifier='clow-valve' %}">
-                                        <div class='mask'></div>
-                                        <div class='item-info'>
-                                            <div class='headline'><h2>Clow Valve</h2></div>
-                                        </div>
-                                    </a>
-                                        <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg1961-jpg-compressor-360x267.jpg' %}"
-                                                                   class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="360" height="267"
-                                                           src="{% static '/wp-content/uploads/2019/05/cimg1961-jpg-compressor-360x267.jpg' %}"
-                                                           class="attachment-post-thumb size-post-thumb wp-post-image"
-                                                           alt=""/></noscript>
-                                        </div>
-                                    </li>
-                                    <li class='item item-type-line'><a class='item-hover'
-                                                                       href="{% url 'portfolio-project' project_identifier='heartland-health-cancer-center' %}">
-                                        <div class='mask'></div>
-                                        <div class='item-info'>
-                                            <div class='headline'><h2>Heartland Health Cancer Center</h2></div>
-                                        </div>
-                                    </a>
-                                        <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg4686-jpg-360x267.jpg' %}"
-                                                                   class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="360" height="267"
-                                                           src="{% static '/wp-content/uploads/2019/05/cimg4686-jpg-360x267.jpg' %}"
-                                                           class="attachment-post-thumb size-post-thumb wp-post-image"
-                                                           alt=""/></noscript>
-                                        </div>
-                                    </li>
-                                    <li class='item item-type-line'><a class='item-hover'
-                                                                       href="{% url 'portfolio-project' project_identifier='heartland-health-centre' %}">
-                                        <div class='mask'></div>
-                                        <div class='item-info'>
-                                            <div class='headline'><h2>Heartland Health Centre</h2></div>
-                                        </div>
-                                    </a>
-                                        <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="{% static '/wp-content/uploads/2019/05/cimg4682-jpg-1-compressor-360x267.jpg' %}"
-                                                                   class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="360" height="267"
-                                                           src="{% static '/wp-content/uploads/2019/05/cimg4682-jpg-1-compressor-360x267.jpg' %}"
-                                                           class="attachment-post-thumb size-post-thumb wp-post-image"
-                                                           alt=""/></noscript>
-                                        </div>
-                                    </li>
-                                    <li class='item item-type-line'><a class='item-hover'
-                                                                       href="{% url 'portfolio-project' project_identifier='nodaway-valley-bank' %}">
-                                        <div class='mask'></div>
-                                        <div class='item-info'>
-                                            <div class='headline'><h2>Nodaway Valley Bank</h2></div>
-                                        </div>
-                                    </a>
-                                        <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="{% static '/wp-content/uploads/2019/05/CIMG4725-360x267.jpg' %}"
-                                                                   class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="360" height="267"
-                                                           src="{% static '/wp-content/uploads/2019/05/CIMG4725-360x267.jpg' %}"
-                                                           class="attachment-post-thumb size-post-thumb wp-post-image"
-                                                           alt=""/></noscript>
-                                        </div>
-                                    </li>
-                                    <li class='item item-type-line'><a class='item-hover'
-                                                                       href="{% url 'portfolio-project' project_identifier='carden-park-school' %}">
-                                        <div class='mask'></div>
-                                        <div class='item-info'>
-                                            <div class='headline'><h2>Carden Park School</h2></div>
-                                        </div>
-                                    </a>
-                                        <div class='item-img'><img width="360" height="267" alt=""
-                                                                   data-src="{% static '/wp-content/uploads/2019/05/IMG_2743-360x267.jpg' %}"
-                                                                   class="attachment-post-thumb size-post-thumb wp-post-image lazyload"
-                                                                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="360" height="267"
-                                                           src="{% static '/wp-content/uploads/2019/05/IMG_2743-360x267.jpg' %}"
-                                                           class="attachment-post-thumb size-post-thumb wp-post-image"
-                                                           alt=""/></noscript>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{#                {% include 'public_app/recent_project_carousel.html' %}#}
                 <div class="vc_row-full-width vc_clearfix"></div>
                 <div class="vc_row wpb_row vc_row-fluid">
                     <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -1543,89 +1203,7 @@
 
     </div>
 
-    <footer class="site-footer style-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-xs-6">
-                    <ul>
-                        <li id="media_image-2" class="widget-container widget_media_image"><a
-                                href="{% url 'home' %}"><img width="258" height="79" alt=""
-                                                                style="max-width: 100%; height: auto;"
-                                                                data-src="{% static '/wp-content/uploads/2019/05/logo-2.png' %}"
-                                                                class="image wp-image-1568  attachment-full size-full lazyload"
-                                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                            <noscript><img width="258" height="79"
-                                           src="{% static '/wp-content/uploads/2019/05/logo-2.png' %}"
-                                           class="image wp-image-1568  attachment-full size-full" alt=""
-                                           style="max-width: 100%; height: auto;"/></noscript>
-                        </a></li>
-                        <li id="text-2" class="widget-container widget_text">
-                            <div class="textwidget"><p>At Hausman Metal Works and Roofing, our number one priority is
-                                doing your job right the first time, and every time. Our reputation for quality as a
-                                major sheet metal, and roofing contractor is unsurpassed. This is the reason for our
-                                substantial growth since our beginning in 1960.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-xs-6">
-                    <ul></ul>
-                </div>
-                <div class="col-md-4 col-xs-6">
-                    <ul>
-                        <li id="anpsopeningtime-2" class="widget-container widget_anpsopeningtime"><h3
-                                class="widget-title">Working Hours</h3>
-                            <table class="working-hours">
-                                <tbody>
-                                <tr>
-                                    <th>Monday</th>
-                                    <td>7:00 AM - 3:30 PM</td>
-                                </tr>
-                                <tr>
-                                    <th>Tuesday</th>
-                                    <td>7:00 AM - 3:30 PM</td>
-                                </tr>
-                                <tr>
-                                    <th>Wendsday</th>
-                                    <td>7:00 AM - 3:30 PM</td>
-                                </tr>
-                                <tr>
-                                    <th>Thursday</th>
-                                    <td>7:00 AM - 3:30 PM</td>
-                                </tr>
-                                <tr>
-                                    <th>Friday</th>
-                                    <td>7:00 AM - 3:30 PM</td>
-                                </tr>
-                                <tr>
-                                    <th>Saturday</th>
-                                    <td>Closed</td>
-                                </tr>
-                                <tr>
-                                    <th>Sunday</th>
-                                    <td>Closed</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-footer">
-            <div class="container">
-                <div class="row">
-                    <ul class="text-center">
-                        <li id="text-5" class="widget-container widget_text">
-                            <div class="textwidget"><p>Hausman Metal Works &amp; Roofing | © 2019 All rights
-                                reserved</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% include 'footer.html' %}
 
 </div>
 
@@ -1755,10 +1333,3 @@
 
 </body>
 </html>
-
-<!--
-Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
-
-
-Served from: hausmans.com @ 2020-12-16 22:28:34 by W3 Total Cache
--->
