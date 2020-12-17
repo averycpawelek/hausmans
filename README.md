@@ -1,5 +1,5 @@
-# Hubbard Research
-Application to manage testing of Hubbard Research students
+# Hausmans
+Application to serve static site for Hausmans
 
 ## Running the app locally
 
