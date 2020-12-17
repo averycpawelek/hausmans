@@ -211,17 +211,13 @@
           href="{% static 'wp-includes/css/dist/block-library/style.min.css' %}" type='text/css'
           media='all'/>
     <link rel='stylesheet' id='contact-form-7-css'
-          href='http://hausmans.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.6' type='text/css'
+          href='{% static "/wp-content/plugins/contact-form-7/includes/css/styles.css" %}' type='text/css'
           media='all'/>
     <link rel='stylesheet' id='rs-plugin-settings-css'
-          href='http://hausmans.com/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8.3'
+          href='{% static "/wp-content/plugins/revslider/public/assets/css/settings.css" %}'
           type='text/css' media='all'/>
-    <style id='rs-plugin-settings-inline-css' type='text/css'>
-        #rs-demo-id {
-        }
-    </style>
     <link rel='stylesheet' id='tf-compiled-options-mobmenu-css'
-          href='http://hausmans.com/wp-content/uploads/dynamic-mobmenu.css?ver=2.8-997' type='text/css' media='all'/>
+          href='{% static "/wp-content/uploads/dynamic-mobmenu.css" %}' type='text/css' media='all'/>
     <link rel='stylesheet' id='tf-google-webfont-roboto-css'
           href='//fonts.googleapis.com/css?family=Roboto%3Ainherit%2C400&#038;subset=latin%2Clatin-ext&#038;ver=5.2.9'
           type='text/css' media='all'/>
@@ -230,11 +226,11 @@
           type='text/css' media='all'/>
     <!--[if lt IE 9]>
     <link rel='stylesheet' id='vc_lte_ie9-css'
-          href='http://hausmans.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css?ver=6.0.2'
+          href='{% static "/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" %}'
           type='text/css' media='screen'/>
     <![endif]-->
     <link rel='stylesheet' id='js_composer_front-css'
-          href='http://hausmans.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.0.2'
+          href='{% static "/wp-content/plugins/js_composer/assets/css/js_composer.min.css" %}'
           type='text/css' media='all'/>
     <style id='js_composer_front-inline-css' type='text/css'>
         .vc_custom_1500287931790 {
@@ -265,16 +261,16 @@
         }
     </style>
     <link rel='stylesheet' id='cssmobmenu-icons-css'
-          href='http://hausmans.com/wp-content/plugins/mobile-menu/includes/css/mobmenu-icons.css?ver=2.8'
+          href='{% static "/wp-content/plugins/mobile-menu/includes/css/mobmenu-icons.css" %}'
           type='text/css' media='all'/>
     <link rel='stylesheet' id='cssmobmenu-css'
-          href='http://hausmans.com/wp-content/plugins/mobile-menu/includes/css/mobmenu.css?ver=2.8' type='text/css'
+          href='{% static "/wp-content/plugins/mobile-menu/includes/css/mobmenu.css" %}' type='text/css'
           media='all'/>
     <link rel='stylesheet' id='font-awesome-css'
-          href='http://hausmans.com/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=6.0.2'
+          href='{% static "/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css" %}'
           type='text/css' media='all'/>
     <link rel='stylesheet' id='owl-css-css'
-          href='http://hausmans.com/wp-content/themes/constructo/js/owl//assets/owl.carousel.css?ver=5.2.9'
+          href='{% static "/wp-content/themes/constructo/js/owl//assets/owl.carousel.css" %}'
           type='text/css' media='all'/>
     <link rel='stylesheet' id='font_type_1-css'
           href='https://fonts.googleapis.com/css?family=Montserrat%3A400italic%2C400%2C500%2C600%2C700%2C300&#038;subset=latin%2Clatin-ext&#038;ver=5.2.9'
@@ -282,15 +278,13 @@
     <link rel='stylesheet' id='font_type_2-css'
           href='https://fonts.googleapis.com/css?family=PT+Sans%3A400italic%2C400%2C500%2C600%2C700%2C300&#038;subset=latin%2Clatin-ext&#038;ver=5.2.9'
           type='text/css' media='all'/>
-    <link rel='stylesheet' id='theme_main_style-css'
-          href='http://hausmans.com/wp-content/themes/constructo/style.css?ver=5.2.9' type='text/css' media='all'/>
     <link rel='stylesheet' id='swipebox-css'
-          href='http://hausmans.com/wp-content/themes/constructo/css/swipebox.css?ver=5.2.9' type='text/css'
+          href='{% static "/wp-content/themes/constructo/css/swipebox.css" %}' type='text/css'
           media='all'/>
     <link rel='stylesheet' id='anps_core-css'
-          href='http://hausmans.com/wp-content/themes/constructo/css/core.css?ver=5.2.9' type='text/css' media='all'/>
+          href='{% static "/wp-content/themes/constructo/css/core.css" %}' type='text/css' media='all'/>
     <link rel='stylesheet' id='theme_wordpress_style-css'
-          href='http://hausmans.com/wp-content/themes/constructo/css/wordpress.css?ver=5.2.9' type='text/css'
+          href='{% static "/wp-content/themes/constructo/css/wordpress.css" %}' type='text/css'
           media='all'/>
     <style id='theme_wordpress_style-inline-css' type='text/css'>
         body, ol.list > li > *, .recent-portfolio--modern-1 .recent-portfolio__excerpt, .testimonial-modern__link, .testimonial-modern__link:hover, .testimonial-modern__link:focus, .product_meta span span, .f-content__content {
@@ -784,8 +778,6 @@
             color: #fff !important;
         }
     </style>
-    <link rel='stylesheet' id='custom-css' href='http://hausmans.com/wp-content/themes/constructo/custom.css?ver=5.2.9'
-          type='text/css' media='all'/>
     <script type='text/javascript'>
         /* <![CDATA[ */
         var monsterinsights_frontend = {
@@ -844,9 +836,6 @@
         padding: 0 !important;
         margin: 0 !important;
     }</style>
-    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
-    <meta name="generator"
-          content="Powered by Slider Revolution 5.4.8.3 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."/>
     <script type="text/javascript">function setREVStartSize(e) {
         try {
             e.c = jQuery(e.c);
