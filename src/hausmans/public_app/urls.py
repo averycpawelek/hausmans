@@ -2,14 +2,15 @@ from django.urls import path
 from .views import (
     home_page_view,
     to_do_view,
-    to_do_project_view
+    to_do_project_view,
+    services_view
 )
 
 urlpatterns = [
     path("", home_page_view, name="home"),
     path("portfolio", to_do_view, name='portfolio'),
     path("portfolio/<str:project_identifier>", to_do_project_view, name='portfolio-project'),
-    path("what-we-do", to_do_view, name='services'),
+    path("what-we-do", services_view, name='services'),
     path("commercial-industrial-roofing", to_do_view, name='commercial-industrial-roofing'),
     path("architectural-sheet-metal", to_do_view, name='architectural-sheet-metal'),
     path("plasma-cutting", to_do_view, name='plasma-cutting'),
