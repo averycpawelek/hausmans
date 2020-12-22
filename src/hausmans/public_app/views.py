@@ -9,15 +9,15 @@ from django.contrib import messages
 
 
 def home_page_view(request):
-    return render(request, 'public_app/home.html')
+    return render(request, 'public_app/home.html', {'current_page': 'home'})
 
 
 def services_view(request):
-    return render(request, 'public_app/services.html')
+    return render(request, 'public_app/services.html', {'current_page': 'services'})
 
 
 def commercial_industrial_roofing_view(request):
-    return render(request, 'public_app/commercial-industrial-roofing.html')
+    return render(request, 'public_app/commercial-industrial-roofing.html', {'current_page': 'commercial-industrial-roofing'})
 
 
 def to_do_view(request):
