@@ -25,6 +25,10 @@ def sheet_metal_view(request):
                   {'current_page': 'sheet-metal-fabrication'})
 
 
+def waterjet_view(request):
+    return render(request, 'public_app/waterjet_cutting.html',
+                  {'current_page': 'waterjet-cutting'})
+
 def to_do_view(request):
     return HttpResponse('TODO')
 
