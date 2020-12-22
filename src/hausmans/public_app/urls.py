@@ -4,7 +4,8 @@ from .views import (
     to_do_view,
     to_do_project_view,
     services_view,
-    commercial_industrial_roofing_view
+    commercial_industrial_roofing_view,
+    sheet_metal_view,
 )
 
 urlpatterns = [
@@ -15,7 +16,7 @@ urlpatterns = [
     path("commercial-industrial-roofing", commercial_industrial_roofing_view, name='commercial-industrial-roofing'),
     path("architectural-sheet-metal", to_do_view, name='architectural-sheet-metal'),
     path("plasma-cutting", to_do_view, name='plasma-cutting'),
-    path("sheet-metal-fabrication", to_do_view, name='sheet-metal-fabrication'),
+    path("sheet-metal-fabrication", sheet_metal_view, name='sheet-metal-fabrication'),
     path("industrial-ventilation", to_do_view, name='industrial-ventilation'),
     path("hvac", to_do_view, name='hvac'),
     path("specialties", to_do_view, name='specialties'),
