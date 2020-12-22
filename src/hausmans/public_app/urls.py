@@ -3,7 +3,8 @@ from .views import (
     home_page_view,
     to_do_view,
     to_do_project_view,
-    services_view
+    services_view,
+    commercial_industrial_roofing_view
 )
 
 urlpatterns = [
@@ -11,7 +12,7 @@ urlpatterns = [
     path("portfolio", to_do_view, name='portfolio'),
     path("portfolio/<str:project_identifier>", to_do_project_view, name='portfolio-project'),
     path("what-we-do", services_view, name='services'),
-    path("commercial-industrial-roofing", to_do_view, name='commercial-industrial-roofing'),
+    path("commercial-industrial-roofing", commercial_industrial_roofing_view, name='commercial-industrial-roofing'),
     path("architectural-sheet-metal", to_do_view, name='architectural-sheet-metal'),
     path("plasma-cutting", to_do_view, name='plasma-cutting'),
     path("sheet-metal-fabrication", to_do_view, name='sheet-metal-fabrication'),

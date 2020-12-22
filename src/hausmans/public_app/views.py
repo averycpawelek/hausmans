@@ -16,6 +16,10 @@ def services_view(request):
     return render(request, 'public_app/services.html')
 
 
+def commercial_industrial_roofing_view(request):
+    return render(request, 'public_app/commercial-industrial-roofing.html')
+
+
 def to_do_view(request):
     return HttpResponse('TODO')
 
