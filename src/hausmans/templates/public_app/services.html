@@ -17,32 +17,53 @@
     <!-- / Yoast SEO plugin. -->
 {% endblock %}
 
-{% block breadcrumb_header %}
-<div class='page-heading ' style=" background-color: #f8f8f8;">
-    <div class='container'>
-        <h1>What we do</h1>
-        <ul class='breadcrumbs'>
-            <li><a href="http://hausmans.com">Home</a></li>
-            <li>What we do</li>
-        </ul>
-    </div>
-</div>
+{% block extracss %}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .row {
+            display: flex;
+            width: 100%;
+            height: auto;
+            flex-wrap: wrap;
+        }
+
+        .row > .col {
+            padding: 14px;
+            flex: 1 1 auto;
+        }
+
+        .col-sm-6 {
+            padding: 14px 0;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .col-sm-6 {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    </style>
 {% endblock %}
 
 {% block page_content %}
     <section class="container">
-        <div class="row">
-
-            {% include 'services_sidebar.html' %}
-
-            <div class='col-md-9'>
+        <div class="vc_row">
+            <div class='col-md-12'>
                 <div class="vc_row wpb_row vc_row-fluid">
                     <div class="wpb_column vc_column_container vc_col-sm-12">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="wpb_text_column wpb_content_element ">
-                                    <div class="wpb_wrapper">
-                                        <p><span style="color: #606060;">As an experienced roofing contractor and sheet metal specialist – Hausman Metal Works and Roofing provide the following services: commercial and industrial roofing, both new installation and roof repair, metal roofing and solar roofing.</span>
+                                    <div class="wpb_wrapper" style="color: black; font-size: 18px;">
+                                        <p
+                                                style="z-index: 5; min-width: 71px; max-width: 1114px; margin-bottom: 20px; white-space: normal; font-size: 40px; line-height: 50px; font-weight: 700; color: black; letter-spacing: px;font-family:Montserrat;text-align:center !important;">
+                                            What We Do</p>
+                                        <p>As an experienced roofing contractor and sheet metal specialist – Hausman Metal Works and Roofing provide the following services: commercial and industrial roofing, both new installation and roof repair, metal roofing and solar roofing.
                                         </p>
                                         <p>Our services also include the manufacturing and installation of
                                             industrial sheet metal fabrication, and architectural sheet metal
@@ -63,14 +84,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="vc_row wpb_row vc_row-fluid vc_custom_1418289717381">
-                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                <div class="row">
+                    <div class="wpb_column vc_column_container col-sm-6">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="wpb_single_image wpb_content_element vc_align_left">
 
                                     <figure class="wpb_wrapper vc_figure">
-                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="682"
+                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="500"
                                                                                                        height="454"
                                                                                                        alt=""
                                                                                                        data-srcset="{% static '/wp-content/uploads/2019/06/1234vf.jpg' %} 682w, {% static '/wp-content/uploads/2019/06/1234vf-300x200.jpg' %} 300w, {% static '/wp-content/uploads/2019/06/1234vf-370x246.jpg' %} 370w, {% static '/wp-content/uploads/2019/06/1234vf-360x240.jpg' %} 360w, {% static '/wp-content/uploads/2019/06/1234vf-600x399.jpg' %} 600w"
@@ -78,7 +99,7 @@
                                                                                                        data-src="{% static '/wp-content/uploads/2019/06/1234vf.jpg' %}"
                                                                                                        class="vc_single_image-img attachment-full lazyload"
                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="682" height="454"
+                                            <noscript><img width="500" height="454"
                                                            src="{% static '/wp-content/uploads/2019/06/1234vf.jpg' %}"
                                                            class="vc_single_image-img attachment-full" alt=""
                                                            srcset="{% static '/wp-content/uploads/2019/06/1234vf.jpg' %} 682w, {% static '/wp-content/uploads/2019/06/1234vf-300x200.jpg' %} 300w, {% static '/wp-content/uploads/2019/06/1234vf-370x246.jpg' %} 370w, {% static '/wp-content/uploads/2019/06/1234vf-360x240.jpg' %} 360w, {% static '/wp-content/uploads/2019/06/1234vf-600x399.jpg' %} 600w"
@@ -93,6 +114,12 @@
                                         <p>Since 1960, Hausman metal works and roofing has been responsible for
                                             literally “covering” a large area in Northwest Missouri. Our certified
                                             safety program sets us apart from our competition</p>
+                                        <p>We offer:</p>
+                                        <ul>
+                                            <li>Solar roofing</li>
+                                            <li>Metal roofing</li>
+                                            <li>Roof repair</li>
+                                        </ul>
 
                                     </div>
                                 </div>
@@ -103,7 +130,7 @@
                                    class="btn  btn-sm style-4" id="custom-id-0" style="">READ MORE</a></div>
                         </div>
                     </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                    <div class="wpb_column vc_column_container col-sm-6">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="wpb_single_image wpb_content_element vc_align_left">
@@ -140,8 +167,8 @@
                     </div>
                 </div>
                 </div>
-                <div class="vc_row wpb_row vc_row-fluid">
-                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                <div class="row">
+                    <div class="wpb_column vc_column_container col-sm-6">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="wpb_single_image wpb_content_element vc_align_center">
@@ -180,13 +207,13 @@
                         </div>
                     </div>
                     </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                    <div class="wpb_column vc_column_container col-sm-6">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="wpb_single_image wpb_content_element vc_align_left">
 
                                     <figure class="wpb_wrapper vc_figure">
-                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="600"
+                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="500"
                                                                                                        height="400"
                                                                                                        alt=""
                                                                                                        data-srcset="{% static '/wp-content/uploads/2019/06/12asa34.jpg' %} 600w, {% static '/wp-content/uploads/2019/06/12asa34-300x200.jpg' %} 300w, {% static '/wp-content/uploads/2019/06/12asa34-370x247.jpg' %} 370w, {% static '/wp-content/uploads/2019/06/12asa34-360x240.jpg' %} 360w"
@@ -194,7 +221,7 @@
                                                                                                        data-src="{% static '/wp-content/uploads/2019/06/12asa34.jpg' %}"
                                                                                                        class="vc_single_image-img attachment-full lazyload"
                                                                                                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
-                                            <noscript><img width="600" height="400"
+                                            <noscript><img width="500" height="400"
                                                            src="{% static '/wp-content/uploads/2019/06/12asa34.jpg' %}"
                                                            class="vc_single_image-img attachment-full" alt=""
                                                            srcset="{% static '/wp-content/uploads/2019/06/12asa34.jpg' %} 600w, {% static '/wp-content/uploads/2019/06/12asa34-300x200.jpg' %} 300w, {% static '/wp-content/uploads/2019/06/12asa34-370x247.jpg' %} 370w, {% static '/wp-content/uploads/2019/06/12asa34-360x240.jpg' %} 360w"
@@ -219,8 +246,8 @@
                     </div>
                     </div>
                 </div>
-                <div class="vc_row wpb_row vc_row-fluid">
-                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                <div class="row">
+                    <div class="wpb_column vc_column_container col-sm-6">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="wpb_single_image wpb_content_element vc_align_left">
@@ -257,13 +284,13 @@
                                    class="btn  btn-sm style-4" id="custom-id-4" style="">READ MORE</a></div>
                         </div>
                     </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                    <div class="wpb_column vc_column_container col-sm-6">
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="wpb_single_image wpb_content_element vc_align_left">
 
                                     <figure class="wpb_wrapper vc_figure">
-                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="465"
+                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="500"
                                                                                                        height="309"
                                                                                                        alt=""
                                                                                                        data-srcset="{% static '/wp-content/uploads/2019/06/12334.jpg' %} 465w, {% static '/wp-content/uploads/2019/06/12334-300x199.jpg' %} 300w, {% static '/wp-content/uploads/2019/06/12334-370x246.jpg' %} 370w, {% static '/wp-content/uploads/2019/06/12334-360x239.jpg' %} 360w"
@@ -295,7 +322,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 {% endblock %}
