@@ -63,6 +63,13 @@
                 max-width: 25%;
             }
         }
+        #id_email_address, #id_message {
+            border: 1px solid #eee;
+            border-radius: 3px;
+            padding: 14px 19px;
+            width: 100%;
+            transition: 0.2s border;
+        }
     </style>
 {% endblock %}
 
@@ -96,6 +103,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-8" style="padding-right: 20px;">
+                    <div class="wpb_wrapper"><h4 class='heading-content  style-1'><span>Send Us A Message</span></h4></div>
                     <form method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
@@ -104,7 +112,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="vc_column-inner">
-                        <div class="wpb_wrapper"><h4 class='heading-content  style-1'><span>CONTACT DETAILS</span></h4>
+                        <div class="wpb_wrapper"><h4 class='heading-content  style-1'><span>Contact Details</span></h4>
                             <div class="vc_empty_space"
                                  style="height: 15px"><span class="vc_empty_space_inner"></span></div>
 
