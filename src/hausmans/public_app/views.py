@@ -35,7 +35,12 @@ def contact_us_view(request):
     if request.method == 'POST':
         form = ContactUsForm(request.POST)
         if form.is_valid():
-            send_email()
+            send_email(
+                request.POST['first_name'],
+                request.POST['last_name'],
+                request.POST['email_address'],
+                request.POST['message']
+            )
             form = ContactUsForm()
     else:
         form = ContactUsForm()
