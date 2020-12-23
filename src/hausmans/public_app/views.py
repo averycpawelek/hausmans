@@ -4,7 +4,8 @@ import datetime
 from django.views.generic import View
 from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
-from django.forms.models import inlineformset_factory
+from public_app.forms import ContactUsForm
+from public_app.utils import send_email
 from django.contrib import messages
 
 
@@ -28,6 +29,25 @@ def sheet_metal_view(request):
 def waterjet_view(request):
     return render(request, 'public_app/waterjet_cutting.html',
                   {'current_page': 'waterjet-cutting'})
+
+
+def contact_us_view(request):
+    if request.method == 'POST':
+        form = ContactUsForm(request.POST)
+        if form.is_valid():
+            send_email()
+            form = ContactUsForm()
+    else:
+        form = ContactUsForm()
+    return render(
+        request,
+        'public_app/contact_us.html',
+        {
+            'current_page': 'contact-us',
+            'form': form
+        }
+    )
+
 
 def to_do_view(request):
     return HttpResponse('TODO')

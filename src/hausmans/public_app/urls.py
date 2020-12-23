@@ -6,7 +6,8 @@ from .views import (
     services_view,
     commercial_industrial_roofing_view,
     sheet_metal_view,
-    waterjet_view
+    waterjet_view,
+    contact_us_view
 )
 
 urlpatterns = [
@@ -26,5 +27,5 @@ urlpatterns = [
     path("waterjet-cutting", waterjet_view, name='waterjet-cutting'),
     path("roof-repair", to_do_view, name='roof-repair'),
     path("about-us", to_do_view, name='about-us'),
-    path("contact-us", to_do_view, name='contact-us'),
+    path("contact-us", contact_us_view, name='contact-us'),
 ]

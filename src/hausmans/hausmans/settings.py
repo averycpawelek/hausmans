@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'public_app.apps.PublicAppConfig',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,6 @@ if ENVIRONMENT == 'prod':
     X_FRAME_OPTIONS = 'DENY'
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+
+RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
