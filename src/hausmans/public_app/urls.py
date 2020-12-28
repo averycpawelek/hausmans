@@ -12,7 +12,7 @@ from .views import (
 )
 
 urlpatterns = [
-    path("/", home_page_view, name="home"),
+    path("", home_page_view, name="home"),
     path("portfolio/", portfolio_view, name='portfolio'),
     path("portfolio/<str:project_identifier>/", project_view, name='portfolio-project'),
     path("what-we-do/", services_view, name='services'),
