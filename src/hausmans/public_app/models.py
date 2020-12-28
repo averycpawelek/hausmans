@@ -3,7 +3,7 @@ from django.db import models
 
 class PortfolioProject(models.Model):
     name = models.CharField(max_length=1000)
-    thumbnail_image = models.ImageField()
+    thumbnail_image = models.ImageField(upload_to='portfolio_images')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

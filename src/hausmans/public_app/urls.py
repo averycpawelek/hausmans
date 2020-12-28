@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.static import serve
 from .views import (
     home_page_view,
     to_do_view,
@@ -29,3 +30,11 @@ urlpatterns = [
     path("about-us", to_do_view, name='about-us'),
     path("contact-us", contact_us_view, name='contact-us'),
 ]
+
+from django.conf import settings
+
+if settings.SERVE_MEDIA_FILES:
+    urlpatterns.append(path('media/<path:path>', serve, {
+        'document_root': settings.MEDIA_ROOT,
+        'show_indexes': True
+    }))

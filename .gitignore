@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-src/sjkenterprises/db.sqlite3
+src/hausmans/db.sqlite3
 .env
 .idea
 docker-compose.yml
@@ -136,3 +136,5 @@ docker-compose.yml
 # VScode 
 .vscode/
 .DS_Store
+
+src/hausmans/media/*
