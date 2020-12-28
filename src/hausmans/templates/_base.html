@@ -6,6 +6,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11"/>
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}">
     <title>{% block title %}{% endblock title %}</title>
 
     {% block seo %}
@@ -839,12 +840,21 @@
         .site-footer {
             margin-top: 0px;
         }        </style>
+    <style>
+        @media only screen and (min-width: 625px) {
+            .image-row {
+                display: flex !important;
+            }
+        }
+    </style>
     <noscript>
         <style type="text/css"> .wpb_animate_when_almost_visible {
             opacity: 1;
         }</style>
     </noscript>
     <link href="{% static "/fontawesome/css/all.css" %}" rel="stylesheet">
+    {% block extracss %}
+    {% endblock %}
 </head>
 <body class="home page-template-default page page-id-1462 wpb-js-composer js-comp-ver-6.0.2 vc_responsive mob-menu-slideout-over">
 <div class="site-wrap">
