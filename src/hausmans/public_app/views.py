@@ -59,6 +59,11 @@ def to_do_view(request):
     return HttpResponse('TODO')
 
 
+def portfolio_view(request):
+    projects = PortfolioProject.objects.all().order_by('-created_at')
+    return render(request, 'public_app/portfolio.html', {'projects': projects})
+
+
 def project_view(request, project_identifier):
     try:
         project = PortfolioProject.objects.get(slug=project_identifier)
