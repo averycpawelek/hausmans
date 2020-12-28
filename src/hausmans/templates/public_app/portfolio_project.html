@@ -1,0 +1,73 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}{{project.name}} - Hausmans{% endblock %}
+
+{% block seo %}
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+    <link rel="canonical" href="http://hausmans.com/{{project.slug}}/"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{project.name}} - Hausmans"/>
+    <meta property="og:url" content="http://hausmans.com/{{ project.slug }}/"/>
+    <meta property="og:site_name" content="Hausmans"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{ project.name }} - Hausmans"/>
+{% endblock %}
+
+{% block page_content %}
+    <section class="container">
+        <div class="normal">
+            <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
+                 class="vc_row wpb_row vc_row-fluid vc_row-no-padding">
+                <div class="wpb_column vc_column_container vc_col-sm-12">
+                    <div class="vc_column-inner">
+                        <div class="wpb_wrapper">
+                            <div class="wpb_revslider_element wpb_content_element">
+                                <link href="https://fonts.googleapis.com/css?family=Montserrat:700%2C400"
+                                      rel="stylesheet" property="stylesheet" type="text/css" media="all">
+                                <p
+                                        style="z-index: 5; min-width: 71px; max-width: 1114px; margin-bottom: 20px; white-space: normal; font-size: 40px; line-height: 50px; font-weight: 700; color: black; letter-spacing: px;font-family:Montserrat;text-align:center !important;">
+                                    {{project.name}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% for image in project.portfolioimage_set.all %}
+                    {% if forloop.first %}
+                        <div class="row">
+                    {% endif %}
+                    <div class="wpb_column vc_column_container col-sm-6">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_single_image wpb_content_element vc_align_left">
+                                    <figure class="wpb_wrapper vc_figure">
+                                        <div class="vc_single_image-wrapper   vc_box_border_grey"><img
+                                                width="500"
+                                                height="454"
+                                                alt=""
+                                                sizes="(max-width: 682px) 100vw, 682px"
+                                                data-src="{{ image.image.url }}"
+                                                class="vc_single_image-img attachment-full lazyload"
+                                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                                            <noscript><img width="500" height="454"
+                                                           src="{{ image.image.url }}"
+                                                           class="vc_single_image-img attachment-full"
+                                                           alt=""
+                                                           sizes="(max-width: 682px) 100vw, 682px"/>
+                                            </noscript>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:2 %}
+                        </div>
+                        <div class="row">{% endif %}
+                    {% if forloop.last %}</div>{% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -69,4 +69,4 @@ def project_view(request, project_identifier):
         project = PortfolioProject.objects.get(slug=project_identifier)
     except:
         return HttpResponse("Not found", status=404)
-    return HttpResponse(project.name)
+    return render(request, 'public_app/portfolio_project.html', {'project': project})
