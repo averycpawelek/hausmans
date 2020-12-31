@@ -4,6 +4,8 @@ from public_app.models import PortfolioProject, PortfolioImage
 
 class ImageInline(admin.TabularInline):
     model = PortfolioImage
+    verbose_name = "Additional Image"
+    verbose_name_plural = "Additional Images"
 
 
 class ProjectAdmin(admin.ModelAdmin):
