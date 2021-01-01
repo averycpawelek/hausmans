@@ -29,13 +29,20 @@
                                 <p
                                         style="z-index: 5; min-width: 71px; max-width: 1114px; margin-bottom: 20px; white-space: normal; font-size: 40px; line-height: 50px; font-weight: 700; color: black; letter-spacing: px;font-family:Montserrat;text-align:center !important;">
                                     {{project.name}}</p>
+                                {% if project.project_details %}
+                                    <div class="wpb_text_column wpb_content_element ">
+                                        <div class="wpb_wrapper" style="color: black; font-size: 18px;">
+                                            <p>{{ project.project_details }}</p>
+                                        </div>
+                                    </div>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
                 </div>
-                {% for image in project.portfolioimage_set.all %}
+                {% for image in images %}
                     {% if forloop.first %}
-                        <div class="row">
+                        <div style="padding-top: 30pxgi" class="row">
                     {% endif %}
                     <div class="wpb_column vc_column_container col-sm-6">
                         <div class="vc_column-inner">
@@ -47,11 +54,11 @@
                                                 height="454"
                                                 alt=""
                                                 sizes="(max-width: 682px) 100vw, 682px"
-                                                data-src="{{ image.image.url }}"
+                                                data-src="{{ image.url }}"
                                                 class="vc_single_image-img attachment-full lazyload"
                                                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
                                             <noscript><img width="500" height="454"
-                                                           src="{{ image.image.url }}"
+                                                           src="{{ image.url }}"
                                                            class="vc_single_image-img attachment-full"
                                                            alt=""
                                                            sizes="(max-width: 682px) 100vw, 682px"/>

@@ -67,6 +67,9 @@ def portfolio_view(request):
 def project_view(request, project_identifier):
     try:
         project = PortfolioProject.objects.get(slug=project_identifier)
+        images = [project.thumbnail_image]
+        for image in project.portfolioimage_set.all():
+            images.append(image.image)
     except:
         return HttpResponse("Not found", status=404)
-    return render(request, 'public_app/portfolio_project.html', {'project': project})
+    return render(request, 'public_app/portfolio_project.html', {'project': project, 'images': images})
