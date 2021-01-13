@@ -38,3 +38,20 @@ cp packaging/environment/example.env.prod .env
 cp docker-compose-prod.yml docker-compose.yml
 docker-compose up --build -d
 ```
+
+
+###Loading portfolio project data
+
+The images for the portfolio projects that were on the legacy version of hausmans.com can be found in the src/hausmans/public_app/media_fixtures directory.
+
+To load them into the media directory so Django can recognize them and serve them in the front end, run the following command:
+```shell script
+docker-compose exec web python manage.py collectmedia
+```
+
+In addition, the database records for these projects are stored in the fixtures directory. To load these records, run:
+```shell script
+docker-compose exec web python manage.py loaddata fixtures/portfolio_projects.json
+```
+
+After these two commands have been ran, the database will be seeded with the portfolio projects from legacy hausmans.com 

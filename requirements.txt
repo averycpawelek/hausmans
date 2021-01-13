@@ -4,3 +4,4 @@ whitenoise==5.0.1
 django-recaptcha==2.0.6
 gmail==0.6.3
 Pillow==8.0.1
+django-media-fixtures==1.0.0

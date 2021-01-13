@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'public_app.apps.PublicAppConfig',
     'captcha',
+    'django_media_fixtures',
 ]
 
 MIDDLEWARE = [
