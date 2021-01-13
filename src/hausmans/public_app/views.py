@@ -6,6 +6,7 @@ from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
 from public_app.forms import ContactUsForm
 from public_app.utils import send_email
+from public_app.models import PortfolioProject
 from django.contrib import messages
 
 
@@ -58,5 +59,17 @@ def to_do_view(request):
     return HttpResponse('TODO')
 
 
-def to_do_project_view(request, project_identifier):
-    return HttpResponse(project_identifier)
+def portfolio_view(request):
+    projects = PortfolioProject.objects.all().order_by('-created_at')
+    return render(request, 'public_app/portfolio.html', {'projects': projects})
+
+
+def project_view(request, project_identifier):
+    try:
+        project = PortfolioProject.objects.get(slug=project_identifier)
+        images = [project.thumbnail_image]
+        for image in project.portfolioimage_set.all():
+            images.append(image.image)
+    except:
+        return HttpResponse("Not found", status=404)
+    return render(request, 'public_app/portfolio_project.html', {'project': project, 'images': images})

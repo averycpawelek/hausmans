@@ -1,0 +1,113 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Projects - Hausmans{% endblock %}
+
+{% block seo %}
+    <!-- This site is optimized with the Yoast SEO plugin v12.8.1 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+    <link rel="canonical" href="http://hausmans.com/portfolio/"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Projects - Hausmans"/>
+    <meta property="og:url" content="http://hausmans.com/portfolio/"/>
+    <meta property="og:site_name" content="Hausmans"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Projects - Hausmans"/>
+    <!-- / Yoast SEO plugin. -->
+{% endblock %}
+
+{% block extracss %}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            width: 100%;
+            height: auto;
+            flex-wrap: wrap;
+        }
+
+        .row > .col {
+            padding: 14px;
+            flex: 1 1 auto;
+        }
+
+        .col-sm-6 {
+            padding: 14px 0;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .col-sm-6 {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block page_content %}
+    <section class="container">
+        <div class="vc_row">
+            <div class='col-md-12'>
+                <div class="vc_row wpb_row vc_row-fluid">
+                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                        <div class="vc_column-inner">
+                            <div class="wpb_wrapper">
+                                <div class="wpb_text_column wpb_content_element ">
+                                    <div class="wpb_wrapper" style="color: black; font-size: 18px;">
+                                        <p
+                                                style="z-index: 5; min-width: 71px; max-width: 1114px; margin-bottom: 20px; white-space: normal; font-size: 40px; line-height: 50px; font-weight: 700; color: black; letter-spacing: px;font-family:Montserrat;text-align:center !important;">
+                                            Projects</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% for project in projects %}
+                    {% if forloop.first %}
+                        <div class="row">
+                    {% endif %}
+                    <div class="wpb_column vc_column_container col-sm-6">
+                        <a target="_self"
+                           href="{% url 'portfolio-project' project_identifier=project.slug %}"
+                           class="btn  btn-sm style-4" id="custom-id-0" style="">
+                            <div class="vc_column-inner">
+                                <div class="wpb_wrapper">
+                                    <div class="wpb_single_image wpb_content_element vc_align_left">
+
+                                        <figure class="wpb_wrapper vc_figure">
+                                            <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="500"
+                                                                                                           height="454"
+                                                                                                           alt=""
+                                                                                                           sizes="(max-width: 682px) 100vw, 682px"
+                                                                                                           data-src="{{ project.thumbnail_image.url }}"
+                                                                                                           class="vc_single_image-img attachment-full lazyload"
+                                                                                                           src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+                                                <noscript><img width="500" height="454"
+                                                               src="{{ project.thumbnail_image.url }}"
+                                                               class="vc_single_image-img attachment-full" alt=""
+                                                               sizes="(max-width: 682px) 100vw, 682px"/></noscript>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <h5 class='heading-content  style-1'><span>{{ project.name }}</span></h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% if forloop.counter|divisibleby:2 %}
+                        </div>
+                        <div class="row">{% endif %}
+                    {% if forloop.last %}</div>{% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
