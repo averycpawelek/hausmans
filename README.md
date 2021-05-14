@@ -27,15 +27,19 @@ This app uses nginx running in a docker container.
 
 Use the docker-compose-prod.yml file when running on a server.
 
+```
+cp packaging/environment/example.env.prod .env
+# fill in values in .env
+cp docker-compose-prod.yml docker-compose.yml
+docker-compose up --build -d
+```
+
 To set up SSL certificates with certbot, edit the `init-letsencrypt.sh` file and all nginx files in the nginx directory to have the correct domain name.
 
 Then run `./init-letsencrypt.sh` to generate the certificates.
 
 Once the certs have been generated, the application can be started with 
 ```
-cp packaging/environment/example.env.prod .env
-# fill in values in .env
-cp docker-compose-prod.yml docker-compose.yml
 docker-compose up --build -d
 ```
 
