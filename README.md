@@ -59,3 +59,14 @@ docker-compose exec web python manage.py loaddata fixtures/portfolio_projects.js
 ```
 
 After these two commands have been ran, the database will be seeded with the portfolio projects from legacy hausmans.com 
+
+
+### Deploying changes to the application server
+1. Make your changes to the application locally, then commit them and push them to the Github repo
+2. SSH into the application server, and cd into the project directory (should be ~/hausmans)
+3. The application server has a deploy key registered with Github, so you should be able to pull from the repository as usual (e.g. `git pull origin main`)
+    a. No changes have been made on the server that are not checked into git, so you can pull freely without worry
+4. Restart the application containers to pick up the changes:
+    a. `docker-compose down && docker-compose up -d`
+    
+ 
